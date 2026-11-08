@@ -1,214 +1,431 @@
-/* Gobal setting for box */
+/* ========================================
+   CHESHIRE QUIZ — COLOURS AND BASE STYLES
+   ======================================== */
+
+:root {
+  color-scheme: dark;
+  --background: #100b20;
+  --panel: #211632;
+  --text: #faf5ff;
+  --muted: #d0bfdc;
+  --pink: #ff70c8;
+  --turquoise: #79f0df;
+  --border: #594368;
+}
+
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-/*-- Body --*/
 body {
-    font-family: 'MyCustomFont', sans-serif;
-    background-color: rgb(211, 24, 195);
-    padding: 10px;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: auto;
-}
-
-div>.timer,
-#timer {
-    font-size: 1.3em;
-    color: rgb(211, 24, 195);
-}
-
-.introduction,
-.quiz-page,
-.controls-container {
-    height: 80%;
-    padding: 20px;
-    background-color: whitesmoke;
-    border-radius: 10px;
-    box-shadow: 0 0 10px;
-}
-
-.list {
-    font-size: 15px;
-    text-align: left;
-}
-
-/*-- Images --*/
-
-.img1 {
-    width: 200px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 0 10px;
-}
-
-.img2 {
-    width: 150px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 6px;
-}
-
-.img3 {
-    position: relative;
-    background-color: aquamarine;
-    width: 200px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px;
-}
-
-.front-page {
-    max-width: 600px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.quiz-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
-
-.question-class {
-    display: flex;
-    font-family: 'Raleway';
-    font-size: 2em;
-    font-weight: bold;
-    color: #FF3EA5;
-}
-
-.cont-container {
-    border-radius: 5px;
+  min-height: 100svh;
+  margin: 0;
+  padding: 48px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Raleway", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(ellipse at top left, #482052 0, transparent 55%),
+    radial-gradient(ellipse at bottom right, #123d43 0, transparent 50%),
+    var(--background);
 }
 
 h1,
-p,
-.start-btn,
-.next-btn {
-    font-family: 'MyCustomFont', sans-serif;
-}
-
-.next-btn {
-    font-size: 2em;
-}
-
-.button {
-    font-family: inherit;
-    font-size: 2em;
-    color: black;
+.question-class,
+#final-score {
+  font-family: "Oswald", sans-serif;
 }
 
 h1 {
-    font-size: 2em;
-    font-weight: bold;
-    margin-top: 0;
-
+  margin: 0 0 20px;
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  line-height: 1.12;
 }
 
 p {
-    line-height: 1.6;
-    color: purple;
-    font-weight: bold;
+  margin: 0 0 20px;
+  color: var(--muted);
+  line-height: 1.8;
 }
 
+button {
+  font: inherit;
+}
+
+button:focus-visible {
+  outline: 3px solid var(--turquoise);
+  outline-offset: 5px;
+}
+
+/* ========================================
+   SHARED PANELS
+   ======================================== */
+
+.introduction,
+.quiz-page,
 .results-container {
-    padding: 5px;
-    background-color: whitesmoke;
-    border-radius: 10px;
+  width: 100%;
+  max-width: 960px;
+  padding: clamp(24px, 5vw, 56px);
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  background: var(--panel);
+  box-shadow: 0 24px 70px #0005;
 }
 
-p>#final-message,
-#final-score {
-    display: none;
-    min-width: 50%;
-    color: #FF3EA5;
+/* Keep the results wrapper within the screen. */
+body > div:last-of-type {
+  width: 100%;
+  max-width: 960px;
 }
+
+/* ========================================
+   WELCOME SCREEN
+   ======================================== */
+
+.introduction {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.8fr) minmax(0, 1.2fr);
+  align-items: center;
+  gap: 40px;
+}
+
+.front-page {
+  min-width: 0;
+}
+
+.front-page h1 {
+  color: var(--pink);
+}
+
+.list {
+  margin: 24px 0 30px;
+  padding-left: 22px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.list li {
+  padding-left: 6px;
+  margin-bottom: 10px;
+}
+
+.list li::marker {
+  color: var(--turquoise);
+}
+
+/* ========================================
+   CHESHIRE ARTWORK
+   ======================================== */
+
+.img1,
+.img2,
+.img3 {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 20px;
+}
+
+.img1 {
+  width: 100%;
+  max-width: 320px;
+  justify-self: center;
+  filter: drop-shadow(0 12px 24px #ff70c833);
+}
+
+.img2 {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  width: 160px;
+  margin: 12px auto;
+}
+
+.img3 {
+  width: 180px;
+  margin: 0 auto 28px;
+}
+
+/* ========================================
+   QUIZ — PROGRESS, TIMER AND QUESTION
+   ======================================== */
+
+.quiz-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 20px;
+}
+
+.quiz-page > div:first-child,
+.quiz-page > div:nth-of-type(2) {
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.quiz-page > div:nth-of-type(2) {
+  text-align: right;
+}
+
+#question-number {
+  color: var(--pink);
+  font-weight: 700;
+}
+
+.timer {
+  margin-left: 6px;
+  color: var(--turquoise);
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.question-class {
+  grid-column: 1 / -1;
+  margin: 8px 0;
+  text-align: center;
+  font-size: clamp(1.6rem, 4vw, 2.3rem);
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+/* ========================================
+   ANSWER BUTTONS
+   ======================================== */
+
+.btn-grid {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.btn-grid button {
+  min-height: 76px;
+  padding: 18px 22px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: #30213f;
+  color: var(--text);
+  text-align: left;
+  line-height: 1.5;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+@media (hover: hover) {
+  .btn-grid button:hover:not(:disabled) {
+    border-color: var(--turquoise);
+    background: #234143;
+    transform: translateY(-3px);
+  }
+}
+
+.btn-grid button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+/* ========================================
+   START, NEXT AND RESTART CONTROLS
+   ======================================== */
 
 .start-btn,
 .next-btn,
 .refresh-btn,
-.restart {
-    margin-top: 20px;
-    padding: 5px 10px;
-    font-size: 2rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0 0 5px;
+.restart button {
+  min-height: 48px;
+  padding: 14px 28px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: var(--pink);
+  color: #21102d;
+  font-weight: 800;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.start-btn:hover,
+.next-btn:hover,
+.restart button:hover {
+  background: var(--turquoise);
+  transform: translateY(-2px);
+}
+
+.controls {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
 }
 
 .refresh-btn {
-    font-size: 1.2em;
+  background: transparent;
+  border-color: var(--border);
+  color: var(--muted);
+}
+
+.refresh-btn:hover {
+  border-color: var(--pink);
+  color: var(--text);
 }
 
 .restart {
-    box-shadow: none;
+  margin-top: 28px;
+  text-align: center;
 }
 
-.start-btn.hide {
-    display: hide;
+/* ========================================
+   RESULTS AND LEADERBOARD
+   ======================================== */
+
+.results-container {
+  text-align: center;
 }
 
-.start-btn:hover {
-    background-color: aquamarine;
+.score-box {
+  margin: 24px 0;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: #30213f;
 }
 
-.btn-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 2);
-    color: black;
-    gap: 10px;
-    width: 100%;
-    max-width: 500px;
-    margin-top: 20px;
+#final-score {
+  display: block;
+  margin-bottom: 14px;
+  color: var(--pink);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
 }
 
-.btn-grid button {
-    display: inherit;
-    padding: 10px;
-    font-size: 1rem;
-    background-color: aqua;
-    border: black;
-    border-radius: 5px;
-    cursor: pointer;
+#final-message {
+  color: var(--muted);
 }
 
-#answer-btn {
-    font: bold;
-
+#leaderboard {
+  margin-top: 24px;
+  overflow-x: auto;
 }
 
 table {
-    border-collapse: collapse;
-    width: 100%;
-    padding: 10px;
+  width: 100%;
+  margin: 24px 0;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 14px 10px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+th {
+  color: var(--turquoise);
+  font-size: 0.85rem;
 }
 
 td {
-    border: 2px gold;
-    padding: 10px;
-    text-align: center;
-    background-color: pink;
-    border-radius: 2px;
-    box-shadow: 0 0 2px;
-
+  color: var(--muted);
 }
 
-tr:nth-child(even) {
-    background-color: #f2f2f2;
+tbody tr:nth-child(even) {
+  background: #ffffff05;
+}
+
+/* ========================================
+   MOBILE LAYOUT
+   ======================================== */
+
+@media (max-width: 640px) {
+  body {
+    padding: 20px 12px;
+    justify-content: flex-start;
+  }
+
+  .introduction,
+  .quiz-page,
+  .results-container {
+    padding: 24px 20px;
+    border-radius: 22px;
+  }
+
+  .introduction {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .img1 {
+    max-width: 180px;
+  }
+
+  .front-page h1 {
+    text-align: center;
+  }
+
+  .start-btn {
+    width: 100%;
+  }
+
+  .quiz-page {
+    gap: 14px;
+  }
+
+  .img2 {
+    width: 110px;
+  }
+
+  .btn-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .btn-grid button {
+    min-height: 60px;
+    padding: 15px 18px;
+  }
+
+  .quiz-page > div:first-child,
+  .quiz-page > div:nth-of-type(2) {
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+}
+
+/* ========================================
+   ACCESSIBILITY AND SCREEN VISIBILITY
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  button {
+    transition: none !important;
+    transform: none !important;
+  }
 }
 
 .hide {
-    display: none !important;
+  display: none !important;
 }
