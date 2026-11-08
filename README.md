@@ -2,37 +2,9 @@
 
 ![Cheshire Logo](assets/favicon/android-chrome-192x192.png)
 
-<!-- Table of Contents -->
-## Table of Contents
-
-* [Project Introduction](#project-introduction)
-* [AmIResponsive](#am-i-responsive)
-* [For First-Time Users](#for-first-time-users)
-* [For Returning Users](#for-returning-users)
-* [My Process](#my-process)
-* [Project Features Overview](#project-features-overview)
-* [Color Reference](#color-reference)
-* [Usage](#usage)
-* [Roadmap](#roadmap)
-* [Testing](#testing)
-* [Responsive Design and Testing](#responsive-design-and-testing)
-* [Known Issues](#known-issues)
-* [Deployment](#deployment)
-* [Contribution](#contribution)
-* [Picture Credits](#picture-credits)
-* [Project Sources](#project-sources)
-* [Finishing Note](#finishing-note)
-* [Acknowledgments](#acknowledgments)
-
-
-
 ## Project Introduction:
 
 Welcome to "Quizzing with Cheshire" – your gateway to a whimsical adventure blending the enchanting world of Alice in Wonderland with the fascinating realm of cats! Whether you're a first-time visitor or a returning explorer, there's something delightful awaiting you in this cat-tastic quiz experience.
-
-
-![AmIResponsive](assets/image/validator/amiresponsive.png)
-
 
 ## For First-Time Users:
 
@@ -40,59 +12,31 @@ Are you ready to embark on a journey filled with curiosity, wonder, and, of cour
 
 With Cheshire by your side, you'll not only test your knowledge of our furry friends but also discover fascinating tidbits about the whimsical world of Alice in Wonderland. Get ready to immerse yourself in a magical adventure that's sure to leave you smiling and wanting more!
 
-
-
 ## For Returning Users:
 
 Welcome back, fellow explorer! If you've enjoyed your previous journey with Cheshire, get ready for even more excitement and fun. We're considering adding more questions from the fairy tale and general cat trivia to enhance your quiz experience. Additionally, we're exploring the possibility of developing a leaderboard, where you can compete with other players and showcase your cat knowledge prowess. Stay tuned for these exciting updates as we continue to make "Quizzing with Cheshire" even more purr-fectly delightful!
 
 This project is inspired by my daughter's desire for interactive experiences. Drawing from the whimsical world of Alice in Wonderland, I set out to bring it to life in this project. And let's be real, those cat lovers out there often have conversations with their furry companions, so why not engage in a quiz with Cheshire and his adventures?
 
-
-## My Process:
-
-I brainstormed questions that would not only be easy but also offer fun facts and memorable takeaways. Realizing the need for variety, I crafted over 20 random questions to curate a dynamic 10-question quiz. To ensure accessibility, I designed it as a multiple-choice experience, suitable for users of all reading levels. And of course, I injected a cheeky fun factor, embodied by our mischievous host, Cheshire.
-
-
-
 ## Project Features Overview:
 
 This project includes several key features designed to enhance the user experience:
 
+### Introduction Page:
 
-### Introduction Page: 
 An inviting introduction page welcomes the user and encourages them to play the game.
 
-### Quiz Section: 
+### Quiz Section:
+
 The main section of the game contains 29 questions about cats and the Cheshire Cat from Alice in Wonderland.
 
-### Score Section: 
+### Score Section:
+
 At the end of the quiz, a score section displays the user's results and includes a leaderboard, which is stored locally using local storage.
 
-### Timer: 
+### Timer:
+
 A timer starts running when the user clicks the start button, adding a time-based challenge element to the game.
-
-
-## Color Reference
-
-[Color Palette](https://color.adobe.com/create/color-wheel#) 
-
-![color wheel from adobe](assets/image/circle-palette.png)
-
-The color scheme for this project was chosen to create a bright and cheerful atmosphere, reflecting the whimsical theme of Cheshire the Cat from "Alice in Wonderland."
-
-- **Primary Color**: `#ff3ea5` - A vibrant pink color used for primary elements.
-- **Wrong Answer**: `#d63333` - A bold red color indicating incorrect answers.
-- **Correct Answer**: `#008000` - A standard green color indicating correct answers.
-- **Font Colors**:
-  - **Black**: `#000000` - Used for the main text to ensure readability.
-  - **Purple**: `#800080` - Used for paragraph text, adding a whimsical touch in line with the theme.
-- **Start Button Border**: `#00ffff` - A bright aqua color used for the border of the start button to make it stand out.
-- **Table Borders** (`<th>` and `<td>` elements): `#ffd700` - A gold color used for table borders to add a touch of elegance.
-- **Background Color**: `#f5f5f5` - A light, neutral background color that keeps the interface clean and readable.
-- **Image Fallback Color**: `#00ffff` - Aqua color used as a fallback if an image fails to load.
-
-
 
 ## Usage:
 
@@ -107,7 +51,7 @@ The color scheme for this project was chosen to create a bright and cheerful atm
    - Click on the answer you believe is correct. The interface will provide immediate feedback, indicating whether your answer was correct or incorrect.
 
 3. **Feedback and Encouragement**:
-   - For each question, after selecting an answer, you will see a message indicating if your answer was correct (green) or incorrect (red). 
+   - For each question, after selecting an answer, you will see a message indicating if your answer was correct (green) or incorrect (red).
    - Encouraging messages will be displayed to motivate you to continue, regardless of whether your answer was right or wrong.
 
 4. **Tracking Your Progress**:
@@ -123,8 +67,6 @@ The color scheme for this project was chosen to create a bright and cheerful atm
 7. **Restarting the Quiz**:
    - If you wish to play again, you can click the "Restart Quiz" button. This will reset the quiz, allowing you to start over and attempt to improve your score.
 
-
-
 ### Tips for a Great Quiz Experience:
 
 - **Read Carefully**: Take your time to read each question and all possible answers thoroughly before making your selection.
@@ -134,9 +76,7 @@ The color scheme for this project was chosen to create a bright and cheerful atm
 
 By following these steps and tips, you will be able to fully enjoy and engage with the "Quizzing with Cheshire" experience, testing your knowledge and having fun along the way.
 
-
-
-## Roadmap: 
+## Roadmap:
 
 To continuously enhance the "Quizzing with Cheshire" experience, the following roadmap outlines planned developments and potential future features:
 
@@ -174,82 +114,56 @@ To continuously enhance the "Quizzing with Cheshire" experience, the following r
 
 By following this roadmap, we aim to create a more engaging, educational, and enjoyable experience for all users, continuously evolving the "Quizzing with Cheshire" project to meet and exceed user expectations.
 
-
-## Testing 
+## Testing
 
 Extensive testing was conducted to ensure the website works across different browsers and screen sizes.
 
 ## Responsive Design and Testing:
+
 I prioritized responsiveness using tools like Lighthouse to ensure a seamless experience across devices. Addressing encountered issues such as upload speed optimization, JavaScript file organization, favicon integration, and refining class names and IDs for clarity were crucial steps in enhancing the project's performance and user experience.
-
-### Device and Screen Size Testing
-
-![CSS](assets/image/validator/css.validator.png)
-
-![W3C](assets/image/validator/html.validator.png)
-
-![Timer](assets/image/validator/bug.timer.png)
-
-### Known Issues
-- Timer Functionality: The timer does not stop when the user finishes the task as expected. Instead, it only ends after the full 2-minute duration, regardless of user input.
-- Restart Button: I encountered difficulties in making the restart button appear correctly. The "hide" functionality was particularly challenging, and I was unable to fully implement this feature before the deadline.
 
 ### Lighthouse
 
 Using Lighthouse to check the Performance of APP.
 
-![Lighthouse](assets/image/validator/lighthouse.testing.png)
-
-
+![Lighthouse]
 
 ## Deployment
 
 - The site was deployed to GitHub pages. The steps to deploy are as follows:
- - In [GitHub respository](https://github.com/kakilian/jubilant-octo-robot.git/),
- navigate to the **Settings** tab
- - From the source section drop-down menu, select the **Main** Branch, then click "Save".
- - The page will automatically be refreshed with a detailed ribbon display to indicate the successful deployment.
-
- The live link can be found [here](https://kakilian.github.io/jubilant-octo-robot.git/)
+- In [GitHub respository](https://github.com/kakilian/Quizzing-with-Cheshire),
+  navigate to the **Settings** tab
+- From the source section drop-down menu, select the **Main** Branch, then click "Save".
+- The page will automatically be refreshed with a detailed ribbon display to indicate the successful deployment.
 
 ### Local Deployment
 
 In order to make a local copy of this püroject, you can clone it.
 In your IDE Terminal, type the following command to clone my repositiry:
 
-   - `git clone https://github.com/kakilian/jubilant-octo-robot.git`
-
-   - Alternatively, if you use Gitpod, you can [click here](https://gitpod.io/#https://github.com/kakilian/jubilant-octo-robot.git/) which will start the Gitpod workspace for you.
-
-
 ## Contribution:
 
 ### Picture Credits:
+
 ![**Picture of Cheshire**](assets/image/cheshire.png)
 ![**Cheshire, sitting on a branch of a tree**](assets/image/cute.png)
-![**Cheshire leaving the game**](assets/image/translucent.png)   
+![**Cheshire leaving the game**](assets/image/translucent.png)
 
 [wallpapers.com](https://wallpapers.com/cheshire-cat-graphic-poster)
 
 For the background image of Cheshire, I sourced a captivating graphic poster from , credited to "miami22". The image depicts Cheshire lounging on a tree branch, reminiscent of the iconic scene from Alice in Wonderland where he first encounters Alice. It serves as a fitting visual for our cat-themed quiz project, intertwined with moments from the beloved Disney adaptation.
 
 ## Project Sources:
+
 I leveraged various resources throughout the development of this Quiz Project:
-- Video tutorial on quiz building. One main one is as follows 
-[Quiz coding](https://www.youtube.com/watch?v=riDzcEQbX6k&list=PLZlA0Gpn_vH_XnZHin-Vjma8KylU-N0X8&ab_channel=WebDevSimplified)
+
+- Video tutorial on quiz building. One main one is as follows
+  [Quiz coding](https://www.youtube.com/watch?v=riDzcEQbX6k&list=PLZlA0Gpn_vH_XnZHin-Vjma8KylU-N0X8&ab_channel=WebDevSimplified)
 - Google Fonts for typography choices.[Google Fonts](https://fonts.google.com/)
 - Color palettes from design playbooks to ensure visual harmony. [Design Playbooks](https://playbook.powerapp.cloud/guides/design_guidelines/color)
 - Favicon creation tool from [favicon.io](https://favicon.io/favicon-converter/).
 - Community forums like [FreeCodeCamp](https://forum.freecodecamp.org/) for troubleshooting and code inspiration.
-including this great shuffling advice [FreeCodeCamp](https://forum.freecodecamp.org/t/how-do-i-make-this-js-code-to-unshuffle-my-questions/513180)
+  including this great shuffling advice [FreeCodeCamp](https://forum.freecodecamp.org/t/how-do-i-make-this-js-code-to-unshuffle-my-questions/513180)
 - GPT - Helped write questions and READme text corrections. [GPT](https://openai.com/index/gpt-4/)
 
 Feel free to explore the whimsical world of Cheshire and embark on this cat-tastic quiz adventure!
-
-### Finishing Note
-Unfortunately, I was not able to fully resolve the issues before my project deadline. Despite my best efforts, the `timer` functionality and `restart` button could not be completed as intended. Additionally, I had planned to implement `@screen-media` for responsive design, particularly focusing on mobile usage first. However, I ran out of time to properly address this for PC users, which is something that will need attention moving forward.
-
-This experience has highlighted the importance of effective time management, particularly in prioritizing tasks that need to be addressed early in the development process rather than leaving them until the end. Moving forward, I plan to continue refining these features to improve the overall user experience. Thank you for your understanding.
-
-## Acknowledgments
-I would like to express my deepest gratitude to everyone who has supported me, both on-screen and in real life, throughout my journey to become a programmer. Your encouragement, guidance, and patience have been invaluable, and I truly appreciate the time and effort you have invested in helping me grow.
