@@ -145,9 +145,9 @@ In your IDE Terminal, type the following command to clone my repositiry:
 
 ### Picture Credits:
 
-![**Picture of Cheshire**](assets/image/cheshire.png)
-![**Cheshire, sitting on a branch of a tree**](assets/image/cute.png)
-![**Cheshire leaving the game**](assets/image/translucent.png)
+<img src="assets/image/cheshire.png" width="200" alt="ChesireSmiling">
+<img src="assets/image/cute.png"  width="300" alt="ChesireTree">
+<img src="assets/image/translucent.png" width="200" alt="behind">
 
 [wallpapers.com](https://wallpapers.com/cheshire-cat-graphic-poster)
 
@@ -155,7 +155,7 @@ For the background image of Cheshire, I sourced a captivating graphic poster fro
 
 ## Project Sources:
 
-I leveraged various resources throughout the development of this Quiz Project:
+I used various resources throughout the development of this Quiz Project:
 
 - Video tutorial on quiz building. One main one is as follows
   [Quiz coding](https://www.youtube.com/watch?v=riDzcEQbX6k&list=PLZlA0Gpn_vH_XnZHin-Vjma8KylU-N0X8&ab_channel=WebDevSimplified)
