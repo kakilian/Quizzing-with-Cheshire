@@ -1,30 +1,31 @@
-console.log('timer.js');
-
-/**
- * Starts a countdown timer and updates the display.
- * @param {number} duration - The duration of the timer in seconds.
- * @param {HTMLElement} display - The element to display the timer.
- * @param {Function} endCallback - Function to call when the timer ends.
- * @returns {Function} A function to stop the timer maually.
- */
+// QUIZ TIMER — COUNT DOWN AND NOTIFY THE QUIZ WHEN TIME ENDS
 export function startTimer(duration, display, endCallback) {
-    let timer = duration;
+    let remaining = duration;
 
-    const timeInterval = setInterval(() => {
-        const minutes = Math.floor(timer / 60);
-        const seconds = timer % 60;
+    function updateDisplay() {
+        const minutes = Math.floor(remaining / 60);
+        const seconds = remaining % 60;
 
-        display.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        display.textContent =
+            `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+    }
 
-        if (--timer < 0) {
+    updateDisplay();
+
+    const interval = setInterval(() => {
+        remaining = Math.max(0, remaining - 1);
+        updateDisplay();
+
+        if (remaining === 0) {
             stop();
-            alert("Time's up!");
+            endCallback();
         }
     }, 1000);
 
-    const stop = () => {
-        clearInterval(timeInterval);
-    };
+    // Call this when the player finishes before time runs out.
+    function stop() {
+        clearInterval(interval);
+    }
 
     return stop;
 }
